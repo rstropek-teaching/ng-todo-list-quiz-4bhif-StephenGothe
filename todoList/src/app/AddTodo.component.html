@@ -1,0 +1,26 @@
+<div style="text-align:left">
+    <table>
+        <tr>
+            <td>Description:</td>
+            <td> <input type="text" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td>Assignd To:</td>
+            <td> 
+                <select name="assigndTo">
+                    <option value="All">All</option>
+                    <option value="{{person.name}}" *ngFor="let person of people | async">{{person.name}}</option>
+                </select> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <button>create</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

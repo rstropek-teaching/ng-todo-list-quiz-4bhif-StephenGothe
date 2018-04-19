@@ -1,0 +1,41 @@
+
+<div *ngIf="sidebar" class="example-sidenav" mode="side">
+  <h3>Menu</h3>
+  <button mat-raised-button routerLink="/showList"> ShowList </button> <br>
+  <button mat-raised-button routerLink="/addTodo"> Add Todo </button> <br>
+  <input type="checkbox" name="showundone"> show undone
+  <br>
+  <br>
+  <h4>People</h4>
+  <table>
+    <tr>
+      <td><input type="radio" name="person" id="" checked></td>
+      <td>All</td>
+    </tr>
+    <tr *ngFor="let person of people | async">
+      <td><input type="radio" name="person" id=""></td>
+      <td>{{person.name}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="example-sidenav-content">
+  <button type="button" mat-button (click)="sidebar = !sidebar">
+    Menue
+  </button>
+</div>
+
+<div style="text-align:center">
+  <h1>
+    TodoList
+  </h1>
+
+  <div class="routing">
+      <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+
+
+

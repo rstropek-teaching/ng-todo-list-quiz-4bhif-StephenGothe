@@ -1,0 +1,18 @@
+<div style="text-align:left">
+    <!---I only show you my list if you show me yours.-->
+
+    <table border="1">
+            <tr>
+                <th>Done</th>
+                <th>ID</th>
+                <th>Description</th>
+                <th>asigned To</th>
+            </tr>
+            <tr *ngFor="let todo of todos | async">
+              <td><input type="checkbox" name="done" id=""></td>
+              <td>{{todo.id}}</td>
+              <td>{{todo.description}}</td>
+              <td>{{todo.assignedTo}}</td>
+            </tr>
+        </table>
+</div>
